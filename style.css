@@ -58,7 +58,9 @@ header {
     :root {
         --responsive-direction: row;
         --responsive-input-width: 30%;
-
+    }
+    .input-row{
+        gap: 0.5em;
     }
 }
 
