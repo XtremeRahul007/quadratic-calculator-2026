@@ -10,10 +10,50 @@
 
 <body>
     <header>
-        <h1 id="page-heading">Quadratic Calculator</h1>
+        <h1 class="page-heading">Quadratic Formula Calculator</h1>
     </header>
     <main>
-
+        <section class="main-equation">
+            <section class="equation-section">
+                <p class="equation-formula-text">The calculator below solves the quadratic equation of:-</p>
+                <p class="equation-formula">ax<sup>2</sup> + bx + c = 0</p>
+            </section>
+            <section class="equation-section">
+                <p class="input-heading">Modify values and click calculate:</p>
+                <form class="input-form">
+                    <fieldset class="input-fieldset">
+                        <legend>Quadratic Coefficients</legend>
+                        <section class="input-fieldset-number-sec">
+                            <div class="input-row">
+                                <label for="input-a" class="inputs-label">a =</label>
+                                <input type="number" id="input-a" class="inputs" step="any" required>
+                            </div>
+                            <div class="input-row">
+                                <label for="input-b" class="inputs-label">b =</label>
+                                <input type="number" id="input-b" class="inputs" step="any" required>
+                            </div>
+                            <div class="input-row">
+                                <label for="input-c" class="inputs-label">c =</label>
+                                <input type="number" id="input-c" class="inputs" step="any" required>
+                            </div>
+                        </section>
+                        <section class="input-fieldset-button-sec">
+                            <div class="input-row-btn">
+                                <button type="submit" id="submit" class="submit">Calculate</button>
+                                <button type="reset" id="reset" class="reset">Clear</button>
+                            </div>
+                        </section>
+                    </fieldset>
+                </form>
+                <form class="output-form">
+                    <fieldset class="output-fieldset">
+                        <legend>Result</legend>
+                        <output type="textarea" id="result" class="result" readonly>
+                        <div></div>
+                    </fieldset>
+                </form>
+            </section>
+        </section>
     </main>
 
     <footer>
