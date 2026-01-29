@@ -3,26 +3,34 @@
     --border-thickness: 2px;
     --main-pad: 1em;
     --bg-main: #e1e7dd;
-    --bg-surface: #3aa346;
-    --border-color: #2f8238;
-    --text-primary: #ffffff;
-    --text-secondary: #3aa346;
+    --main-surface: #3aa346;
+    --bg-surface: #8ec893;
+    --border-color: #64b56c;
+    --text-primary: #000;
+    --text-secondary: #1e2b1f;
     --accent: #d46a4c;
     --accent-hover: #b8583d;
     --text-shadow: 0px 0px 5px #121512;
     --responsive-direction: column;
     --responsive-input-width: 100%;
-    --input-area-color: #c2d1bd;
+    --input-area-color: #b9dbbc;
 }
 
 html {
     font-size: clamp(14px, 0.9vw + 0.5rem, 18px);
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-main: #121512;
         --bg-surface: #1e2b1f;
+        --main-surface: #1e2b1f;
         --border-color: #2c362d;
         --text-primary: #e1e7dd;
         --text-secondary: #94a395;
@@ -43,9 +51,11 @@ header {
     flex-direction: column;
     align-items: center;
     padding: var(--main-pad);
-    background-color: var(--bg-surface);
+    background-color: var(--main-surface);
     border-bottom: var(--border-thickness) solid var(--border-color);
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+    box-shadow: 0px 3px 8px #000000af;
+
 }
 
 @media screen and (min-width: 481px) {
@@ -59,7 +69,8 @@ header {
         --responsive-direction: row;
         --responsive-input-width: 30%;
     }
-    .input-row{
+
+    .input-row {
         gap: 0.5em;
     }
 }
@@ -71,6 +82,8 @@ header {
 body {
     background-color: var(--bg-main);
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-equation {
@@ -78,6 +91,7 @@ body {
     border: var(--border-thickness) solid var(--border-color);
     border-radius: var(--border-radius);
     margin: var(--main-pad);
+    box-shadow: 3px 3px 8px #00000070;
 }
 
 @media screen and (min-width: 480px) {
@@ -105,7 +119,6 @@ body {
 
 .equation-formula-text {
     color: var(--text-primary);
-    text-shadow: var(--text-shadow);
 }
 
 .equation-formula {
@@ -117,7 +130,6 @@ body {
 .input-heading {
     font-size: 1rem;
     color: var(--text-primary);
-    text-shadow: var(--text-shadow);
 }
 
 .input-form,
@@ -222,7 +234,6 @@ body {
     color: var(--text-primary);
     font-weight: bold;
     background: var(--accent);
-    text-shadow: var(--text-shadow);
     transition: 0.1s ease-in-out;
 }
 
@@ -272,4 +283,18 @@ body {
     font-size: 1rem;
     color: var(--text-primary);
     font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--main-surface);
+    color: var(--text-primary);
+    font-size: 1rem;
+    padding: var(--main-pad);
+    border: var(--border-color) solid var(--border-thickness);
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+}
+
+main{
+    flex: 1;
 }
