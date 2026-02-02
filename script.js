@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const outPut = document.getElementById("result");
 
     const roundOff = Intl.NumberFormat('en-US', {
-        minimumFractionDigits: 2,
+        minimumFractionDigits: 0,
         maximumFractionDigits: 4
     });
 
