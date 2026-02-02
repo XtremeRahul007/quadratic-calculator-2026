@@ -169,6 +169,8 @@ main {
     padding: .5em var(--main-pad) var(--main-pad);
     border: var(--border-thickness) solid var(--border-color);
     border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
 }
 
 .input-fieldset legend,
@@ -300,9 +302,8 @@ main {
     border: none;
     outline: none;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: var(--normal-text-font-size);
     color: var(--text-primary);
-    font-weight: bold;
 }
 
 footer {
