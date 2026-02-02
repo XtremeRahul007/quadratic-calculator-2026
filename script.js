@@ -13,28 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
     function quadraticCalculations(a, b, c, d) {
         if (d > 0) {
             const discriminant = Math.sqrt(d);
-            const posX = (-b + discriminant) / (2 * a);
-            const negX = (-b - discriminant) / (2 * a);
             return {
-                xP: roundOff.format(posX),
-                xN: roundOff.format(negX)
+                xP: (-b + discriminant) / (2 * a),
+                xN: (-b - discriminant) / (2 * a)
             };
         }
 
         if (d === 0) {
-            const equX = -b / (2 * a);
             return {
-                x: roundOff.format(equX)
+                x: equX = -b / (2 * a)
             };
         }
 
         if (d < 0) {
             const absDiscriminant = Math.sqrt(-d);
-            const realX = -b / (2 * a);
-            const imagX = absDiscriminant / (2 * a);
             return {
-                xR: roundOff.format(realX),
-                xI: roundOff.format(imagX)
+                xR: -b / (2 * a),
+                xI: absDiscriminant / (2 * a)
             };
         }
     }
@@ -56,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function sign(s) {
-        return s >= 0 ? `+ ${s}` : `- ${Math.abs(s)}`;
+        return s >= 0 ? `+ ${roundOff.format(Math.abs(s))}` : `- ${roundOff.format(Math.abs(s))}`;
     }
     form.addEventListener("submit", (event) => {
         event.preventDefault()
