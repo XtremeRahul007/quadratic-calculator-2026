@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (d < 0) {
-                outPut.value = `${equation} \nSolution: x = ${sign(result.xR)} ${sign(result.xI)}i or x = ${sign(result.xR)} ${sign(result.xI)}i`;
+                outPut.value = `${equation} \nSolution: x = ${sign(result.xR)} ${sign(result.xI)}i or x = ${sign(result.xR)} ${sign(-result.xI)}i`;
             }
         }
         catch (error) {

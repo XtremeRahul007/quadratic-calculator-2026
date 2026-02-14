@@ -256,15 +256,23 @@ main {
     color: var(--text-primary);
     font-weight: bold;
     background: var(--accent);
-    transition: 0.1s ease-in-out;
+    transition: 0.025s ease;
 }
 
-.submit:hover,
-.reset:hover {
-    background-color: var(--accent-hover);
-    cursor: pointer;
-    border-color: var(--accent);
-    box-shadow: 0px 0px 10px var(--accent);
+@media screen and (min-width: 481px) {
+
+    .submit:hover,
+    .reset:hover {
+        background-color: var(--accent-hover);
+        cursor: pointer;
+        border-color: var(--accent);
+        box-shadow: 0px 0px 10px var(--accent);
+    }
+
+    .submit:focus-visible,
+    .reset:focus-visible {
+        outline: var(--border-color);
+    }
 }
 
 .submit:active,
@@ -272,6 +280,9 @@ main {
     background-color: var(--text-primary);
     color: var(--accent);
     text-shadow: none;
+    transform: scale(0.98);
+    box-shadow: 0px 0px 10px var(--accent);
+    border-color: var(--accent);
 }
 
 .submit {
