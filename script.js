@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (d === 0) {
             return {
-                x: equX = -b / (2 * a)
+                x: -b / (2 * a)
             };
         }
 
